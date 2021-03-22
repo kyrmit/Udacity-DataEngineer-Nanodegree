@@ -1,11 +1,11 @@
-#S3 DataLake
+# S3 DataLake
 
-##Motive:
+## Motive:
 
 Aim of this project is to create an ETL pipeline using the data stored in S3 buckets and process that data into respective Fact and dimentsion tables using spark and then upload the parquet files back to S3.
 
 
-##Dataset (Public S3 buckets):
+## Dataset (Public S3 buckets):
 Song Data: s3://udacity-dend/song_data 
 Log Data Path: s3://udacity-dend/log_data 
 
@@ -13,7 +13,7 @@ Log Data Path: s3://udacity-dend/log_data
 
 A Star Schema would be required for optimized queries on song play queries
 
-<b>Fact Table</b>
+<b> Fact Table </b>
 
 <b>songplays_table</b> - records in event data associated with song plays i.e. records with page NextSong songplay_id, start_time, user_id, level, song_id, artist_id, session_id, location, user_agent
 
@@ -27,13 +27,13 @@ A Star Schema would be required for optimized queries on song play queries
 
 <b>time_schema_table</b> - timestamps of records in songplays broken down into specific units start_time, hour, day, week, month, year, weekday
 
-##Pipeline
+## Pipeline
 
 1.Load the Data which are in JSON Files(Song Data and Log Data)
 2.Use Spark to process these JSON files and then generate a set of Fact and Dimension Tables
 4.Load back this data to S3
 
 
-##Execution Steps:
+## Execution Steps:
 1.Insert your AWS IAM credential in dl.cfg
 2.Run etl.py in terminal
